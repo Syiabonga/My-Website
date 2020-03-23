@@ -1,2 +1,2 @@
 # My-Website
-Share knowledge and learn!
+Learning and Sharing!
