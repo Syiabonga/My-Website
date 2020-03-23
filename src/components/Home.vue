@@ -13,16 +13,18 @@
             <a href="https://github.com/Syiabonga">
               <img class="icon" src="../assets/github.png" alt="">
             </a>
-            <img class="icon" src="../assets/linkedin.png" alt="" style="margin-left: 10px;">
+            <a href="https://www.linkedin.com/in/leandro-landim-28349313a/">
+              <img class="icon" src="../assets/linkedin.png" alt="" style="margin-left: 10px;">
+            </a>
           </div>
         </div>
         <div class="section-publication">
-          <div class="row">
+          <div class="row" v-if="!pubOpen">
             <div class="col-md-2 hide-xs"></div>
             <div class="col-md-4 pub-card">
               <div style="padding:25px;">
                 <img src="../assets/css.png" alt="">
-                <a href="#">
+                <a href="#" @click="openPublication">
                   <span>How to avoid overlap using CSS?</span>
                 </a>
               </div>
@@ -30,12 +32,24 @@
             <div class="col-md-4 pub-card">
               <div style="padding:25px;">
                 <img src="../assets/logo.png" alt="">
-                <a href="#">
+                <a href="#" @click="openPublication">
                   <span>How to avoid overlap using CSS?</span>
                 </a>
               </div>
             </div>
             <div class="col-md-2 hide-xs"></div>
+          </div>
+          <div class="row text-center" v-if="pubOpen" style="margin-top:20px;">
+            <div class="col-md-3 hide-xs"></div>
+            <div class="col-md-6">
+              <hr>
+              <h2 style="color:#495057;">How to avoid overlap using CSS?</h2>
+              <a href="#" @click="closePublication" style="float:right;">
+                <img src="../assets/back.png" alt="" style="width:15px;height:15px">
+                voltar
+              </a>
+            </div>
+            <div class="col-md-3 hide-xs"></div>
           </div>
         </div>
       </div>
@@ -44,6 +58,19 @@
 <script>
 export default {
   name: 'Home',
+  data() {
+    return {
+      pubOpen: false,
+    };
+  },
+  methods: {
+    openPublication() {
+      this.pubOpen = true;
+    },
+    closePublication() {
+      this.pubOpen = false;
+    },
+  },
 };
 </script>
 <style scoped>
@@ -59,6 +86,9 @@ export default {
 }
 .section-publication{
   margin-top: 5%;
+}
+.section-publication a{
+  text-decoration: none;
 }
 .section-publication img{
   width: 90px;
@@ -92,12 +122,10 @@ export default {
   color: #0096e6;
 }
 @media screen and (max-width: 736px) {
-.section-publication{
-  font-size: 11px;
-}
 .section-publication .pub-card{
   margin-top: 20px;
   width: 100%;
+  font-size: 11px;
 }
 }
 </style>
