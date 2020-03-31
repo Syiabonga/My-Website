@@ -139,7 +139,7 @@ export default {
   width: 100%;
 }
 .section-publication span{
-  font-size: 11px;
+  font-size: 10px;
 }
 }
 </style>
