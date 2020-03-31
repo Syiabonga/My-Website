@@ -2,8 +2,9 @@
     <div class="container-fluid">
       <div class="section-information">
         <div class="row">
-          <div class="col-md-6">
-            <img src="../assets/0.png" class="rounded-circle" alt="Cinque Terre">
+          <div class="col-md-2 hidden-xs"></div>
+          <div class="col-md-8 text-center">
+            <img src="../assets/0.png" class="center rounded-circle" alt="Cinque Terre">
             <h1>Leandro Landim</h1>
             <p>Hello! I'm an eternal apprentice interested in technologies
               mainly focused in Web Development. In this website, I share some
@@ -17,27 +18,26 @@
               <img class="icon" src="../assets/linkedin.png" alt="" style="margin-left: 10px;">
             </a>
           </div>
+          <div class="col-md-2 hidden-xs"></div>
         </div>
         <div class="section-publication">
           <div class="row" v-if="!pubOpen">
-            <div class="col-md-2 hide-xs"></div>
-            <div class="col-md-4 pub-card">
-              <div style="padding:25px;">
+            <div class="col-md pub-card">
+              <div style="padding:40px;">
                 <img src="../assets/css.png" alt="">
                 <a href="#" @click="openPublication">
                   <span>How to avoid overlap using CSS?</span>
                 </a>
               </div>
             </div>
-            <div class="col-md-4 pub-card">
-              <div style="padding:25px;">
+            <div class="col-md pub-card">
+              <div style="padding:40px;">
                 <img src="../assets/logo.png" alt="">
                 <a href="#" @click="openPublication">
-                  <span>How to avoid overlap using CSS?</span>
+                  <span>Get data from an API using Axios</span>
                 </a>
               </div>
             </div>
-            <div class="col-md-2 hide-xs"></div>
           </div>
           <div class="row text-center" v-if="pubOpen" style="margin-top:20px;">
             <div class="col-md-3 hide-xs"></div>
@@ -80,19 +80,27 @@ export default {
 .section-information p{
   text-align: justify;
 }
+.section-information h1{
+  text-align: center;
+}
 .section-information .icon{
   width: 30px;
   height: 30px;
 }
 .section-publication{
   margin-top: 5%;
+  text-align: center;
+}
+.section-publication span{
+  font-size: 15px;
 }
 .section-publication a{
   text-decoration: none;
 }
 .section-publication img{
-  width: 90px;
-  height: 90px;
+  width: 60px;
+  height: 60px;
+  align-self: center;
 }
 .section-publication .row{
   column-gap: 1em;
@@ -121,10 +129,12 @@ export default {
   cursor: pointer;
   color: #0096e6;
 }
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 896px) {
 .section-publication .pub-card{
-  margin-top: 20px;
+  margin-top: 15px;
   width: 100%;
+}
+.section-publication span{
   font-size: 11px;
 }
 }
