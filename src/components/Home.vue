@@ -141,5 +141,8 @@ export default {
 .section-publication span{
   font-size: 10px;
 }
+.section-information h1{
+  font-size: 35px;
+}
 }
 </style>
