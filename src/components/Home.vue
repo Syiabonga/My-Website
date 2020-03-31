@@ -4,10 +4,10 @@
         <div class="row">
           <div class="col-md-2 hidden-xs"></div>
           <div class="col-md-8 text-center">
-            <img src="../assets/0.png" class="center rounded-circle" alt="Cinque Terre">
+            <img src="../assets/0.jpg" class="center rounded-circle" alt="Cinque Terre">
             <h1>Leandro Landim</h1>
-            <p>Hello! I'm an eternal apprentice interested in technologies
-              mainly focused in Web Development. In this website, I share some
+            <p>Welcome! I'm an eternal apprentice interested in technologies
+              mainly focused in Web Development. In this website, I share my
               knowledge and bring the solution of some issues that I have been
               through during my coding routine.
             </p>
@@ -76,6 +76,10 @@ export default {
 <style scoped>
 .section-information{
   padding: 50px;
+}
+.section-information img{
+  height: 230px;
+  width: 230px;
 }
 .section-information p{
   text-align: justify;
