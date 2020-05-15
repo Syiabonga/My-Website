@@ -7,7 +7,7 @@
             <img src="../assets/avatar.png" class="avatar center rounded" alt="Cinque Terre">
             <h1>Hi!</h1>
             <p>My name is Leandro Landim. I'm a Junior Web Developer mainly focused
-              in Javascrip, CSS, HTML, and Ruby.
+              in Javascript, CSS, HTML, and Ruby.
               Currently, I'm using Vue Js, Bootstrap, and Rails as frameworks
               to develop my projects.
               Music and Soccer are my slide-off.
