@@ -4,13 +4,15 @@
         <div class="row">
           <div class="col-md-2 hidden-xs"></div>
           <div class="col-md-8 text-center">
-            <img src="../assets/0.jpg" class="center rounded-circle" alt="Cinque Terre">
-            <h1>Leandro Landim</h1>
-            <p>Welcome! I'm an eternal apprentice interested in technologies
-              mainly focused in Web Development. In this website, I share my
-              knowledge and bring the solution of some issues that I have been
-              through during my coding routine.
+            <img src="../assets/avatar.png" class="avatar center rounded" alt="Cinque Terre">
+            <h1>Hi!</h1>
+            <p>My name is Leandro Landim. I'm a Junior Web Developer mainly focused
+              in Javascrip, CSS, HTML, and Ruby.
+              Currently, I'm using Vue Js, Bootstrap, and Rails as frameworks
+              to develop my projects.
+              Music and Soccer are my slide-off.
             </p>
+
             <a href="https://github.com/Syiabonga">
               <img class="icon" src="../assets/github.png" alt="">
             </a>
@@ -20,66 +22,17 @@
           </div>
           <div class="col-md-2 hidden-xs"></div>
         </div>
-        <div class="section-publication">
-          <div class="row" v-if="!pubOpen">
-            <div class="col-md pub-card">
-              <div style="padding:40px;">
-                <img src="../assets/css.png" alt="">
-                <a href="#" @click="openPublication">
-                  <span>How to avoid overlap using CSS?</span>
-                </a>
-              </div>
-            </div>
-            <div class="col-md pub-card">
-              <div style="padding:40px;">
-                <img src="../assets/logo.png" alt="">
-                <a href="#" @click="openPublication">
-                  <span>Get data from an API using Axios</span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="row text-center" v-if="pubOpen" style="margin-top:20px;">
-            <div class="col-md-3 hide-xs"></div>
-            <div class="col-md-6">
-              <hr>
-              <h2 style="color:#495057;">How to avoid overlap using CSS?</h2>
-              <a href="#" @click="closePublication" style="float:right;">
-                <img src="../assets/back.png" alt="" style="width:15px;height:15px">
-                voltar
-              </a>
-            </div>
-            <div class="col-md-3 hide-xs"></div>
-          </div>
-        </div>
       </div>
     </div>
 </template>
 <script>
 export default {
   name: 'Home',
-  data() {
-    return {
-      pubOpen: false,
-    };
-  },
-  methods: {
-    openPublication() {
-      this.pubOpen = true;
-    },
-    closePublication() {
-      this.pubOpen = false;
-    },
-  },
 };
 </script>
 <style scoped>
 .section-information{
   padding: 50px;
-}
-.section-information img{
-  height: 230px;
-  width: 230px;
 }
 .section-information p{
   text-align: justify;
@@ -90,59 +43,38 @@ export default {
 .section-information .icon{
   width: 30px;
   height: 30px;
+  float: left;
 }
-.section-publication{
-  margin-top: 5%;
+.section-information p{
   text-align: center;
 }
-.section-publication span{
-  font-size: 15px;
+.section-information .avatar{
+  height: 160px;
+  width: 160px;
 }
-.section-publication a{
-  text-decoration: none;
-}
-.section-publication img{
-  width: 60px;
-  height: 60px;
-  align-self: center;
-}
-.section-publication .row{
-  column-gap: 1em;
-}
-.section-publication .pub-card{
-  background-color: white;
-  height: 150px;
-  width: 10px;
-  border-radius: 8px;
-  box-shadow: 0px 3px 6px #ABCBDF;
-  font-size: 15px;
-}
-.section-publication .pub-card:hover{
-  box-shadow:
-    rgba(0, 0, 0, 0.4) 0 4px 8px 0;
-    transition: box-shadow 500ms cubic-bezier(0.22, 0.84, 0.57, 1.5);
-    background-color:
-    white;
-    border-radius: 5px;
-}
-.section-publication .pub-card a{
-  text-decoration: none;
+p{
   color: #495057;
+  text-align: justify !important;
+  line-height: 2em;
 }
-.section-publication .pub-card a:hover{
-  cursor: pointer;
-  color: #0096e6;
+h1{
+  margin-top: 0.7em;
 }
 @media screen and (max-width: 896px) {
-.section-publication .pub-card{
-  margin-top: 15px;
-  width: 100%;
-}
-.section-publication span{
-  font-size: 10px;
-}
 .section-information h1{
   font-size: 35px;
+}
+.rem-pad{
+  padding: 0px !important;
+  margin-top: 40px;
+}
+
+.section-information .avatar{
+  height: 100px;
+  width: 100px;
+}
+.section-information{
+  padding: 10%;
 }
 }
 </style>

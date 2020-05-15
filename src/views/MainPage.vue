@@ -5,7 +5,7 @@
 import Home from '@/components/Home.vue';
 
 export default {
-  name: 'main',
+  name: 'home',
   components: {
     Home,
   },
