@@ -32,7 +32,7 @@ export default {
 </script>
 <style scoped>
 .section-information{
-  padding: 50px;
+  padding: 5% 15%;
 }
 .section-information p{
   text-align: justify;
@@ -75,6 +75,7 @@ h1{
 }
 .section-information{
   padding: 10%;
+  margin-top: 2em;
 }
 }
 </style>
